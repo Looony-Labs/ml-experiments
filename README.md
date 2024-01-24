@@ -1,3 +1,3 @@
 # LLM Experiments
 
-Demos for some LLM and gen ai use cases
+Demos for useful, easily reproducible and extensible LLM and GenAI use-cases.

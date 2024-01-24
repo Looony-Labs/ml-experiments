@@ -1,0 +1,4 @@
+txtai == 6.3.0
+autoawq
+qdrant-client == 1.7.1
+
