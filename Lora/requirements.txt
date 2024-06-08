@@ -1,0 +1,8 @@
+jupyterlab
+transformers
+peft
+accelerate
+bitsandbytes
+xformers
+trl<0.9.0
+flash-attn

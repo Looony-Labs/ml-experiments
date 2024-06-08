@@ -1,0 +1,11 @@
+name: llm_exp_lora
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - jupyterlab
+  - ipywidgets
+  - matplotlib
+  - pip
+  - pip:
+    - -r requirements.txt
