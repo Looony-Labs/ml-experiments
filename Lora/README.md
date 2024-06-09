@@ -51,6 +51,7 @@ In each fine-tuning, we first do continual training to introduce hindi language,
 - All hyperparams were kept same
 - 1 RTX 4090 24GB was used for the experiments
 - Note that process was restarted before each fine-tuning within each notebook to reset memory.
+- Lora Instruction fine tuned models using unsloth have been pushed to hf for further experimentation.
 
 ### Continued Pre-training Results
 
