@@ -1,6 +1,6 @@
 # LoRA fine tuning optimizations
 
-This is a demo of LoRA fine tunings using both transformers and unsloth.
+This is a demo comparison of LoRA fine tunings using both transformers and unsloth.
 
 
 ## Setting up the environment
@@ -31,10 +31,39 @@ jupyter-lab
 
 ### Fine-Tuning
 
-Following fine-tuning notebooks are provided
+3 different fine-tunings were conducted and a notebook is provided for each:
 
 |Description|Link|
 |-----------|----|
-|Lora fine tuning llama-3 8B using transformers|[Lora.ipynb](./Lora.ipynb)|
-|Lora fine tuning of llama-3 8B using unsloth|[LoraUnsloth.ipynb](./LoraUnsloth.ipynb)|
-|Lora fine tuning of llama-3 8B using unsloth with optimizations|[OptimizedLoraUnsloth.ipynb](./OptimizedLoraUnsloth.ipynb)|
+|Lora fine tuning llama-3 8B using transformers library|[Lora.ipynb](./Lora.ipynb)|
+|Lora fine tuning of llama-3 8B using unsloth library |[LoraUnsloth.ipynb](./LoraUnsloth.ipynb)|
+|Lora fine tuning of llama-3 8B using unsloth library with optimizations|[OptimizedLoraUnsloth.ipynb](./OptimizedLoraUnsloth.ipynb)|
+
+In each fine-tuning, we first do continual training to introduce hindi language, then do instruction fine-tuning for the model to learn answering in hindi.
+
+
+## Results Comparison
+
+- Dataset used for continual pre-training: [wikimedia/wikipedia](https://huggingface.co/datasets/wikimedia/wikipedia) hindi
+- Dataset used for instruction fine-tuning: [FreedomIntelligence/alpaca-gpt4-hindi](https://huggingface.co/datasets/FreedomIntelligence/alpaca-gpt4-hindi)
+- Each training was performed for 240 steps to keep the experiment within time and resource limits.
+- All hyperparams were kept same
+- 1 RTX 4090 24GB was used for the experiments
+- Note that process was restarted before each fine-tuning within each notebook to reset memory.
+
+### Continued Pre-training Results
+
+|Technique|Peak Reserved Memory Total(GB)|Peak Memory for Training(GB)|Peak reserved memory % of max memory|Time Taken(s)|
+|---------|------------------------------|----------------------------|------------------------------------|-------------|
+|LoRA using transformers|13.945|4.601|59.569|157.5131|
+|LoRA using unsloth|9.645|2.946|84.8644|
+|LoRA unsing unsloth optimized|
+
+### Instruction Fine-Tuning Results
+
+
+|Technique|Peak Reserved Memory Total(GB)|Peak Memory for Training(GB)|Peak reserved memory % of max memory|Time Taken(s)|
+|---------|------------------------------|----------------------------|------------------------------------|-------------|
+|LoRA using transformers|21.83|12.525|93.251|611.1513|
+|LoRA using unsloth|11.332|4.613|48.07|596.7715|
+|LoRA using unsloth optimized|
