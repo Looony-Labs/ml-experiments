@@ -56,9 +56,9 @@ In each fine-tuning, we first do continual training to introduce hindi language,
 
 |Technique|Trainable Params|Total Params|Peak Reserved Memory Total(GB)|Peak Memory for Training(GB)|Peak reserved memory % of max memory|Time Taken(s)|
 |---------|----------------|------------|------------------------------|----------------------------|------------------------------------|-------------|
-|LoRA using transformers|335,544,320|13.945|4.601|59.569|157.5131|
-|LoRA using unsloth|335,544,320|8,365,805,568|9.645|2.946|84.8644|
-|LoRA using unsloth optimized|1,386,217,472|9,416,478,720
+|LoRA using transformers|335,544,320|8,365,805,568|13.945|4.601|59.569|157.5131|
+|LoRA using unsloth|335,544,320|8,365,805,568|9.645|2.946|41.2|84.8644|
+|LoRA using unsloth optimized|1,386,217,472|9,416,478,720|17.723|8.075|75.707|110.633|
 
 ### Instruction Fine-Tuning Results
 
