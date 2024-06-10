@@ -57,7 +57,7 @@ In each fine-tuning, we first do continual training to introduce hindi language,
 
 |Technique|Trainable Params|Total Params|Peak Reserved Memory Total(GB)|Peak Memory for Training(GB)|Peak reserved memory % of max memory|Time Taken(s)|
 |---------|----------------|------------|------------------------------|----------------------------|------------------------------------|-------------|
-|LoRA using transformers|335,544,320|8,365,805,568|13.945|4.601|59.569|157.5131|
+|LoRA using transformers|335,544,320|8,365,805,568|10.588|0|45.229|141.3068|
 |LoRA using unsloth|335,544,320|8,365,805,568|9.645|2.946|41.2|84.8644|
 |LoRA using unsloth optimized|1,386,217,472|9,416,478,720|17.723|8.075|75.707|110.633|
 
@@ -66,6 +66,6 @@ In each fine-tuning, we first do continual training to introduce hindi language,
 
 |Technique|Trainable Params|Total Params|Peak Reserved Memory Total(GB)|Peak Memory for Training(GB)|Peak reserved memory % of max memory|Time Taken(s)|Model|
 |---------|----------------|------------|------------------------------|----------------------------|------------------------------------|-------------|-----|
-|LoRA using transformers|335,544,320|8,365,805,568|21.83|12.525|93.251|611.1513|
+|LoRA using transformers|335,544,320|8,365,805,568|15.244|4.695|65.117|1012.1207|
 |LoRA using unsloth|335,544,320|8,365,805,568|11.332|4.613|48.07|596.7715|[lora-llama-3-8B-unsloth](https://huggingface.co/saucam/lora-llama-3-8B-unsloth-unopt)|
 |LoRA using unsloth optimized|1,386,217,472|9,416,478,720|21.492|11.824|91.807|672.1318|[lora-llama-3-8B-unsloth](https://huggingface.co/saucam/lora-llama-3-8B-unsloth-opt)|
