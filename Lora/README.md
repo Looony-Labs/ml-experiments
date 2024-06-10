@@ -41,8 +41,7 @@ jupyter-lab
 
 In each fine-tuning, we first do continual training to introduce hindi language, then do instruction fine-tuning for the model to learn answering in hindi.
 
-
-## Results Comparison
+## Test Setup
 
 - Dataset used for continual pre-training: [wikimedia/wikipedia](https://huggingface.co/datasets/wikimedia/wikipedia) hindi
 - Dataset used for instruction fine-tuning: [FreedomIntelligence/alpaca-gpt4-hindi](https://huggingface.co/datasets/FreedomIntelligence/alpaca-gpt4-hindi)
@@ -52,6 +51,14 @@ In each fine-tuning, we first do continual training to introduce hindi language,
 - 1 RTX 4090 24GB was used for the experiments
 - Note that process was restarted before each fine-tuning within each notebook to reset memory.
 - Lora Instruction fine tuned models using unsloth have been pushed to hf for further experimentation.
+
+
+## Results Comparison
+
+- Unsloth optimizations result in better loss curve than both transformers and normal unsloth
+- Unsloth is almost 2X faster than transformers in these tests!!
+- Unsloth is using less VRAM than transformers, difference is more during instruction finetuning
+- It is amazing that with just 10 minutes of training, model learns to answer (somewhat) in a new language!
 
 ### Continued Pre-training Results
 
